@@ -5,6 +5,7 @@
 }
 body{
     font-family: sans-serif;
+    max-width: 900px;
 }
 .container{
     display: flex;
@@ -20,7 +21,6 @@ body{
     padding: 10px 20px;
 }
 .image{
-    background-image: url("bg.svg");
     height: 65%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -89,8 +89,11 @@ input:focus{
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+.btn-1{
+    background-color: #03A9F4
+}
 .btn-2 {
-  background-color: #4f70b5;
+  background-color: #3765c7;
   color:white;
 }
 .or {
@@ -140,26 +143,4 @@ button{
     opacity: 0.8;
   }
 
-@media (max-width: 900px) {
-    .container {
-      flex-direction: column;
-    }
 
-    form,
-    .content {
-      width: 100%;
-    }
-
-    .btn {
-        flex-direction: column;
-    }
-    .image {
-      height: 70vh;
-    }
-  }
-
-  @media (max-width: 425px) {
-    form {
-      padding: 20px;
-    }
-  }
