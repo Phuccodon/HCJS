@@ -1,43 +1,29 @@
-// let full name = document.getElementById("full name"),
-//     email address = document.getElementById("email address"),
-//     create password = document.getElementById("create password");
-
-
-// let errorMsg = document.getElementsByClassName("error"),
-//     successIcon = document.getElementsByClassName("success-icon"),
-//     failureIcon = document.getElementsByClassName("failure-icon");
-
 let id = (id) => document.getElementById(id);
-let classes = (classes) =>document.getElementsByClassName(classes);
-
-let fullname = id("full name"),
-    createpassword = id("createpassword"),
-    emailaddress = id("emailaddress"),
-    form = id("form"),
-    errorMsg = classes("error"),
-    successIcon = classes("success-icon"),
-    failureIcon = classes("failure-icon");
-
-form.addEventListener("submit",(e) =>{
-    e.preventDefault(); //callback() trong js
-    engine(fullname,0,"Fullname cannot be blank!");
-    engine(emailaddress,1,"Email address cannot be blank!");
-    engine(createpassword,2,"Password cannot be blank!");
-
-});
-
-let engine = (id,serial,message) =>{
-    if(id.value.trim()===""){
-        errorMsg[serial].innerHTML = message;
-        id.style.border ="2px solid red";
-        failureIcon[serial].style.opacity="1";
-        successIcon[serial].style.opacity="0";
-    }else{
-        errorMsg[serial].innerHTML = "";
-        id.style.border ="2px solid green";
-        failureIcon[serial].style.opacity="0";
-        successIcon[serial].style.opacity="1";
-    }
+let classes = (classes) => document.getElementsByClassName(classes);
 
 
+let fullname = id("fullname"),
+  createpassword = id("createpassword"),
+  email = id("email"),
+  form = id("form"),
+  phone = id("phone");
+
+let errorMsg = classes("error");
+
+
+
+
+let checkBlank = (id, serial, message) => {
+  if(id.value.trim() ==="") {
+    errorMsg[serial].innerHTML = message;
+  }
 }
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log("listen");
+  checkBlank(fullname, 0, "Full name can not be blank!");
+  checkBlank(email, 1, "Email can not be blank!");
+  checkBlank(phone, 2, "Phone can not be blank!");
+  checkBlank(createpassword, 3, "Create password can not be blank!");
+});
