@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <title>Form Validation Example</title>
+</head>
+<body>
+    <div class="container">
+      <div class="content">
+        <div class="logo">
+          <img src="logo (1).svg" alt=""/></div>
+        <div class="image"></div>
+        <div class="text"> Start for free & get<br />attractive offers today !
+        </div>
+    </div>
+        <form action="" id="form" method="post">
+            <div>
+                <div class="social">
+                    <div class="title">Create Account</div>
+                    <div class="question">
+                        Get started with your free account<br />
+                        <span>OR</span>
+                    </div>
+                    <div class="btn">
+                      <div class="btn-1">
+                          <img src="https://icons8.com/icon/114450/twitter-circled" />
+                          Login via Twitter
+                      </div>
+                      <div class="btn-2">
+                          <img src="https://icons8.com/icon/uLWV5A9vXIPu/facebook" />
+                          Login via facebook
+                      </div>
+                    </div>
+                </div>
+                <div class="or">Or</div>
+            </div>
+        
+        <!-- User Name input-->
+        <div>
+            <label for="fullname"></label>
+            <i class="fas fa-user"></i>
+            <input 
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Full name">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        <!-- Email input-->
+        <div>
+            <label for="email address"></label>
+            <i class="fas fa-envelope"></i>
+            <input 
+            type="emailaddress"
+            name="emailaddress"
+            id="emailaddress"
+            placeholder="Email address">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        <div>
+            <label for="email address"></label>
+             
+            <input 
+            type="phonenumber"
+            name="phonenumber"
+            id="phonenumber"
+            placeholder="Phone number">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        <select class="form-control"
+            <i class="fa-sharp fa-solid fa-building"></i>
+            <option selected=""> Select job type</option>
+            <option>Designer</option>
+            <option>Manager</option>
+            <option>Accaunting</option>
+        </select>
+        <!-- Password input-->
+        <div>
+            <label for="createpassword"></label>
+            <i class="fas fa-lock"></i>
+            <input 
+            type=" createpassword"
+            name="createpassword"
+            id="createpassword"
+            placeholder="Create password">
+            <i class="fas fa-exclamation-circle failure-icon"></i>
+            <i class="fas fa-check-circle success-icon"></i>
+            <div class="error"></div>
+        </div>
+        <div>
+            <label for="repeatpassword"></label>
+            <i class="fas fa-lock"></i>
+            <input 
+            type=" repeatpassword"
+            name="repeatpassword"
+            id="repeatpassword"
+            placeholder="Repeat password">
+        </div>
+       <button type="create account">Create Account</button>
+       <p class="">Have an account? Log In</p>
+        </form>
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
+
